@@ -5,33 +5,54 @@
     <meta charset="UTF-8">
     <title>Blog</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/1fb1d501a0.js"></script>
+    <style>
+      body,head {font-family: "Avenir Next", "Avenir", sans-serif}
+    </style>
 </head>
 <body>
-    <header>
-        <div class="form-logo">
-            <img src="images/logo.png" alt="logo" width="100px" height="100px">
-        </div>
-        <div class="form-icons">
-            <img src="images/search.png" alt="search" width="24" height="24">
-            <img src="images/social-fb.png" alt="fb-icon" width="24" height="24">
-            <img src="images/social_insta.png" alt="insta-icon" width="24" height="24">
-            <img src="images/social_twitter.png" alt="twitter-icon" width="24" height="24">
-        </div>
-
-
-        
-    </header>
-    <main>
-
-    </main>
+    <header class="main-header" style="width: 1200">
+        <div class="header-top">   
+                <div class="top-left">
+                    <ul class="logo">
+                        <li>
+                            <img src="images/logo.png" width="150" height="150">
+                        </li>
+                    </ul>
+                </div>
+                <div class="top-right">
+                    <ul class="social-nav" id="social-nav">
+                        <li class="social-nav-item search-item">
+                            <i class="fas fa-search fa-2x"></i>
+                        </li>
+                        <li class="social-nav-item fb-link">
+                            <a href="https://facebook.com"><i class="fab fa-facebook-f fa-2x"></i></a>
+                        </li>
+                        <li class="social-nav-item ig-link">
+                            <a href="https://instagram.com"><i class="fab fa-instagram fa-2x"></i></a>
+                        </li>
+                        <li class="social-nav-item twitter-link">
+                            <a href="https://twitter.com"><i class="fab fa-twitter-square fa-2x"></i></a>
+                        </li> 
+                    </ul>        
+                </div>  
+                <nav id="navigation-menu" class="navigation-menu">
+                    <ul> 
+                        <li><a href="#">Home</a></li> 
+                        <li><a href="#">About</a></li> 
+                        <li><a href="#">Contact</a></li> 
+                    </ul> 
+                </nav>  
+                <a href="#main-menu-toggle" class="backdrop" hidden></a>
+        </header>
     <aside>
 
     </aside>
     
 
-<footer>
-    
-</footer>
+    <footer>
+
+    </footer>
 
 </body>
 </html>

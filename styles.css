@@ -1,8 +1,99 @@
-.form-icons{
-    margin-bottom: 20px;
-    text-align: right;
+
+.main-header .header-top {
+ /**   display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: 150px; **/
+    position: relative;
+    justify-content: space-between;
+    align-items: baseline;
+    background-color: azure
 }
 
-.form-logo{
-    text-align: left;
+
+.top-right{    
+    text-align: right;
+    vertical-align: top;
+    grid-area: "social-icons";
 }
+
+
+.top-left{
+    text-align: left;
+    float: left;
+    margin-bottom: 5px;
+    grid-area: "logo";
+}
+
+
+ul, li {
+    list-style: none;
+    display: inline;
+    padding: 0px;
+    margin: 0px;
+}
+
+article,
+aside,
+details,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section {
+	display: block
+}
+
+.social-nav .social-nav-item {
+    padding: 4px 8px;    
+    width: auto;
+    margin-bottom: 50px;
+	border: none;
+	display: inline-block;
+}
+
+
+.navigation-menu{
+    text-align: right;
+    margin-right: 10px;
+    margin:5px;
+    padding: 18px;
+    color: black;
+    font-size: medium;
+    grid-area: "navigation-menu"
+}
+
+.burger-navigation-menu{
+    display: none;
+}
+
+.search-item{
+    margin-right: 50px;
+}
+
+.home-nav{
+    grid-area: "home"
+}
+
+.about-nav{
+    grid-area:"about"
+}
+
+.contact-nav{
+    grid-area: "contact"
+}
+
+
+
+@media (max-width: 480px){
+    .main-header {
+        display: grid;
+        grid-template-areas: 
+        "home"
+        "about"
+        "contact"
+        ;
+    }
+}
+
