@@ -18,15 +18,15 @@ body {
     font-weight: normal;
     align-items: baseline;
     justify-content: space-between;
-    font-size: 14px; 
-    color:cadetblue;
+    font-size: 14px;
     background-color: white;
   }
 
 aside{
-      display: block;
-      float: right;
-      padding-left: 10px;
+    max-width: 20%;
+    display: block;
+    float: right;
+    padding: 10px;
   }
 
 .top-right{    
@@ -77,12 +77,13 @@ ul, li {
 /** Main -> Post  **/
 
 .container {
-    max-width: 1200px;
+    max-width: 80%;
     display: grid;
-    grid-template-columns: repeat(auto-fill, 300px);
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
     grid-auto-rows: 400px;
     grid-gap: 25px;
     margin: 0 auto;
+    position: relative;
     
  }
 
@@ -92,19 +93,47 @@ ul, li {
 
 
 
-.grid-card {
+.grid-card { 
+    position: relative;
     float:right;
     width: 300px;
     margin-left: 10px;
     margin: 5px;
     padding: 3px;    
     align-items:initial;    
+    color:rgb(8, 30, 104);
     justify-content: start; 
     border: 2px solid #a7a6a6;
     box-shadow: 0 0 3px 1px #dddddd;
     border-radius: 2px;
     border-spacing: 2px;
     overflow: hidden;  
+}
+
+.grid-card-statistic-wrp{
+    position: absolute;
+    bottom:0;
+}
+
+.grid-card:hover{
+    border-color: darksalmon;
+
+}
+
+.grid-card-time{
+    color:dimgray;
+}
+
+.comments{
+    color: #5d747ee0;
+}
+
+.likes{
+    color:cornflowerblue;
+}
+
+.grid-card-author{
+    color: slategray
 }
 
 .grid-card-img{
