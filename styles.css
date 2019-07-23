@@ -3,20 +3,19 @@
     box-sizing: border-box;
 }
 
-.main-header .header-top {    
+.header {    
     position: relative;
-    justify-content: space-between;
-    align-items: baseline;
+    overflow: hidden;
+    display:inline-block;
     background-color: #F7F7FF;
 }
 
+
 article,
-aside,
 details,
 figcaption,
 figure,
 footer,
-header,
 main,
 menu,
 nav,
@@ -63,10 +62,8 @@ input[type=text], select {
 body {    
     width: 1200px;
     position: relative;
-    font-family: Helvetica, sans-serif;
     font-weight: normal;
-    align-items: baseline;
-    justify-content: space-between;
+    
     font-size: 14px;
     background-color: #BDD5EA;
   }
@@ -78,25 +75,32 @@ aside{
     padding: 10px;
   }
 
-.top-right{    
-    text-align: right;
+.top-right{
+    float:right;
     vertical-align: top;
     grid-area: "social-icons";
 }
 
-.top-left{
+.logo-part{
     text-align: left;
     float: left;
     margin-bottom: 5px;
-    grid-area: "logo";
 }
 
 
-ul, li {
+ .header > ul, li {
     list-style: none;
     display: inline;
-    padding: 0px;
-    margin: 0px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.author-social > ul,li{    
+    list-style: none;
+    display: inline;
+    padding: 1px;
+    margin: 2px;
+    
 }
 
 .social-nav .social-nav-item {
@@ -108,14 +112,14 @@ ul, li {
 }
 
 
-.navigation-menu{
-    text-align: right;
+#navigationMenu{
+    position: absolute;
+    bottom: 0;
+    right: 0;
     margin-right: 10px;
     margin:5px;
     padding: 18px;
-    color: black;
     font-size: medium;
-    grid-area: "navigation-menu"
 }
 
 
@@ -300,22 +304,31 @@ ul, li {
     color: slategray
 }
 
-.grid-card-img{
+.grid-card > img{
     transition: transform .2s;
     overflow: hidden;  
 }
 
-.grid-card-img:hover{
+.grid-card:hover > img{
     transform: scale(1.2);
 }
 
-@media (max-width:360px){
-
-    .hidden-navigation-menu .hidden-navigation .hidden-menu-toggle  .hidden-menu{
-        display: inline-block;
+@media screen and (max-width:360px){
+    .header a{
+        float: none;
+        display: block;
+        text-align: left;
     }
-    .header-top{
+    .top-right{
         display: none;
     }
+
+    .bottom-right{
+        float: none;
+    }
+    
+    /**.hidden-navigation-menu .hidden-navigation .hidden-menu-toggle  .hidden-menu{
+        display: inline-block;
+    } **/
 }
 
