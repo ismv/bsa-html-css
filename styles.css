@@ -10,6 +10,16 @@
     background-color: azure;
 }
 
+input[type=text], select {
+    width: 100%;
+    padding: 6px 10px;
+    margin: 4px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    box-sizing: border-box;
+  }
+
 body {    
     width: 1200px;
     display: grid;
@@ -95,7 +105,6 @@ ul, li {
 
 .grid-card { 
     position: relative;
-    float:right;
     width: 300px;
     margin-left: 10px;
     margin: 5px;
