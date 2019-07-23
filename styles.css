@@ -1,13 +1,17 @@
 
-.main-header .header-top {
+*{
+    box-sizing: border-box;
+}
+
+.main-header .header-top {    
     position: relative;
     justify-content: space-between;
     align-items: baseline;
     background-color: azure;
 }
 
-
-body {
+body {    
+    width: 1200px;
     display: grid;
     position: relative;
     font-family: Helvetica, sans-serif;
@@ -16,7 +20,13 @@ body {
     justify-content: space-between;
     font-size: 14px; 
     color:cadetblue;
-    background-color: cornsilk;
+    background-color: white;
+  }
+
+aside{
+      display: block;
+      float: right;
+      padding-left: 10px;
   }
 
 .top-right{    
@@ -66,32 +76,43 @@ ul, li {
 
 /** Main -> Post  **/
 
-*{
-    box-sizing: border-box;
-}
-
 .container {
+    max-width: 1200px;
     display: grid;
     grid-template-columns: repeat(auto-fill, 300px);
+    grid-auto-rows: 400px;
     grid-gap: 25px;
-    border: 1px solid #07638d;
-    border-radius: 5px;
-    background-color: #fff4e6;
+    margin: 0 auto;
+    
  }
 
  .container > div img{
      max-width: 100%;
  }
 
+
+
 .grid-card {
+    float:right;
     width: 300px;
     margin-left: 10px;
     margin: 5px;
-    padding: 3px;
-    align-items:initial;
-    justify-content: start;
+    padding: 3px;    
+    align-items:initial;    
+    justify-content: start; 
     border: 2px solid #a7a6a6;
     box-shadow: 0 0 3px 1px #dddddd;
     border-radius: 2px;
     border-spacing: 2px;
+    overflow: hidden;  
 }
+
+.grid-card-img{
+    transition: transform .2s;
+    overflow: hidden;  
+}
+
+.grid-card-img:hover{
+    transform: scale(1.2);
+}
+
