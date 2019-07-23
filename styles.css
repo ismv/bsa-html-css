@@ -1,5 +1,5 @@
 
-*{
+* {
     box-sizing: border-box;
 }
 
@@ -7,7 +7,34 @@
     position: relative;
     justify-content: space-between;
     align-items: baseline;
-    background-color: azure;
+    background-color: #F7F7FF;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section {
+	display: block
+}
+
+a
+{
+  text-decoration: none;
+  color: #232323;
+  
+  transition: color 0.3s ease;
+}
+
+a:hover
+{
+  color: #FE5F55;
 }
 
 input[type=text], select {
@@ -20,16 +47,28 @@ input[type=text], select {
     box-sizing: border-box;
   }
 
+
+
+  input[type=submit] {
+    width: 100%;
+    background-color: rgb(37, 123, 221);
+    color: white;
+    padding: 7px 10px;
+    margin: 4px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
 body {    
     width: 1200px;
-    display: grid;
     position: relative;
     font-family: Helvetica, sans-serif;
     font-weight: normal;
     align-items: baseline;
     justify-content: space-between;
     font-size: 14px;
-    background-color: white;
+    background-color: #BDD5EA;
   }
 
 aside{
@@ -84,24 +123,139 @@ ul, li {
     margin-right: 50px;
 }
 
+.hidden-navigation-menu{
+    display: none;
+}
+
+.menu-toggle
+{
+  display: block;
+  position: relative;
+  top: 50px;
+  left: 50px;
+  
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.menu-toggle > input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; 
+  z-index: 2;
+  
+  -webkit-touch-callout: none;
+}
+.menu-toggle > span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #cdcdcd;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+.menu-toggle > span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+.menu-toggle > span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+.menu-toggle > input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+.menu-toggle > input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+.menu-toggle > input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+.hidden-menu
+{
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+.hidden-menu > li
+{
+  display: block;
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+.menu-toggle input:checked ~ ul
+{
+  transform: none;
+}
+
+
 /** Main -> Post  **/
 
 .container {
     max-width: 80%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
-    grid-auto-rows: 400px;
-    grid-gap: 25px;
     margin: 0 auto;
-    position: relative;
-    
- }
+    position: relative;    
+}
 
  .container > div img{
      max-width: 100%;
  }
 
+ .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    grid-auto-rows: 400px;
+    grid-gap: 25px;
+ }
 
+.tags-cloud{
+    padding-top: 5px;
+    align-content: center;
+}
 
 .grid-card { 
     position: relative;
@@ -109,7 +263,8 @@ ul, li {
     margin-left: 10px;
     margin: 5px;
     padding: 3px;    
-    align-items:initial;    
+    align-items:initial; 
+    background-color: #ECC8AE;   
     color:rgb(8, 30, 104);
     justify-content: start; 
     border: 2px solid #a7a6a6;
@@ -125,7 +280,7 @@ ul, li {
 }
 
 .grid-card:hover{
-    border-color: darksalmon;
+    border-color: #D7907B;
 
 }
 
@@ -138,7 +293,7 @@ ul, li {
 }
 
 .likes{
-    color:cornflowerblue;
+    color: #495867;
 }
 
 .grid-card-author{
@@ -152,5 +307,15 @@ ul, li {
 
 .grid-card-img:hover{
     transform: scale(1.2);
+}
+
+@media (max-width:360px){
+
+    .hidden-navigation-menu .hidden-navigation .hidden-menu-toggle  .hidden-menu{
+        display: inline-block;
+    }
+    .header-top{
+        display: none;
+    }
 }
 
