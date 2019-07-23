@@ -1,21 +1,27 @@
 
 .main-header .header-top {
- /**   display: grid;
-    grid-template-columns: repeat(5,1fr);
-    grid-template-rows: 150px; **/
     position: relative;
     justify-content: space-between;
     align-items: baseline;
-    background-color: azure
+    background-color: azure;
 }
 
+body {
+    display: grid;
+    position: relative;
+    font-family: Helvetica, sans-serif;
+    font-weight: normal;
+    align-items: baseline;
+    justify-content: space-between;
+    font-size: 14px;
+    color:cadetblue;
+  }
 
 .top-right{    
     text-align: right;
     vertical-align: top;
     grid-area: "social-icons";
 }
-
 
 .top-left{
     text-align: left;
@@ -30,19 +36,6 @@ ul, li {
     display: inline;
     padding: 0px;
     margin: 0px;
-}
-
-article,
-aside,
-details,
-figure,
-footer,
-header,
-main,
-menu,
-nav,
-section {
-	display: block
 }
 
 .social-nav .social-nav-item {
@@ -64,36 +57,45 @@ section {
     grid-area: "navigation-menu"
 }
 
-.burger-navigation-menu{
-    display: none;
-}
 
-.search-item{
+.search-item {
     margin-right: 50px;
 }
 
-.home-nav{
-    grid-area: "home"
+/** Main -> Post  **/
+
+*{
+    box-sizing: border-box;
+}
+.container{
+    max-width: 1200px;
 }
 
-.about-nav{
-    grid-area:"about"
+.container {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 300px);
+    grid-gap: 25px;
+    border: 1px solid #07638d;
+    border-radius: 5px;
+    background-color: #fff4e6;
+ }
+
+ .grid-card-img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
 }
 
-.contact-nav{
-    grid-area: "contact"
+.grid-card {
+    width: 300px;
+    margin-left: 10px;
+    margin: 5px;
+    padding: 3px;
+    align-items:initial;
+    justify-content: start;
+    border: 2px solid #e665d4;
+    box-shadow: 0 0 3px 1px #dddddd;
+    border-radius: 2px;
+    border-spacing: 2px;
 }
-
-
-
-@media (max-width: 480px){
-    .main-header {
-        display: grid;
-        grid-template-areas: 
-        "home"
-        "about"
-        "contact"
-        ;
-    }
-}
-
