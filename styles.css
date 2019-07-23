@@ -78,6 +78,10 @@ ul, li {
     background-color: #fff4e6;
  }
 
+ .container > div img{
+     max-width: 100%;
+ }
+
 .grid-card {
     width: 300px;
     margin-left: 10px;
