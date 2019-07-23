@@ -7,7 +7,21 @@
     position: relative;
     justify-content: space-between;
     align-items: baseline;
-    background-color: azure;
+    background-color: #F7F7FF;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section {
+	display: block
 }
 
 a
@@ -20,10 +34,8 @@ a
 
 a:hover
 {
-  color: tomato;
+  color: #FE5F55;
 }
-
-
 
 input[type=text], select {
     width: 100%;
@@ -50,14 +62,13 @@ input[type=text], select {
 
 body {    
     width: 1200px;
-    display: grid;
     position: relative;
     font-family: Helvetica, sans-serif;
     font-weight: normal;
     align-items: baseline;
     justify-content: space-between;
     font-size: 14px;
-    background-color: white;
+    background-color: #BDD5EA;
   }
 
 aside{
@@ -230,9 +241,8 @@ ul, li {
     position: relative;    
 }
 
-
  .container > div img{
-     max-width: 90%;
+     max-width: 100%;
  }
 
  .container{
@@ -253,7 +263,8 @@ ul, li {
     margin-left: 10px;
     margin: 5px;
     padding: 3px;    
-    align-items:initial;    
+    align-items:initial; 
+    background-color: #ECC8AE;   
     color:rgb(8, 30, 104);
     justify-content: start; 
     border: 2px solid #a7a6a6;
@@ -269,7 +280,7 @@ ul, li {
 }
 
 .grid-card:hover{
-    border-color: darksalmon;
+    border-color: #D7907B;
 
 }
 
@@ -282,7 +293,7 @@ ul, li {
 }
 
 .likes{
-    color:cornflowerblue;
+    color: #495867;
 }
 
 .grid-card-author{
