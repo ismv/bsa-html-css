@@ -67,25 +67,16 @@ ul, li {
 *{
     box-sizing: border-box;
 }
-.container{
-    max-width: 1200px;
-}
 
 .container {
-    position: relative;
+    max-width: 1200px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, 300px);
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 25px;
     border: 1px solid #07638d;
     border-radius: 5px;
     background-color: #fff4e6;
  }
-
- .grid-card-img {
-    height: 200px;
-    width: 100%;
-    object-fit: cover;
-}
 
 .grid-card {
     width: 300px;
@@ -94,7 +85,7 @@ ul, li {
     padding: 3px;
     align-items:initial;
     justify-content: start;
-    border: 2px solid #e665d4;
+    border: 2px solid #a7a6a6;
     box-shadow: 0 0 3px 1px #dddddd;
     border-radius: 2px;
     border-spacing: 2px;
